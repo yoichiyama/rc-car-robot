@@ -5,10 +5,14 @@ radio.onReceivedString(function (receivedString) {
         maqueen.motorStop(maqueen.Motors.All)
     } else if (receivedString == "右") {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 50)
-        basic.pause(500)
+        basic.pause(300)
         maqueen.motorStop(maqueen.Motors.All)
     } else if (receivedString == "左") {
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 50)
+        basic.pause(300)
+        maqueen.motorStop(maqueen.Motors.All)
+    } else {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 50)
         basic.pause(500)
         maqueen.motorStop(maqueen.Motors.All)
     }
